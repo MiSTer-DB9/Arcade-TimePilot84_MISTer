@@ -27,7 +27,7 @@ source "${SCRIPT_DIR}/compute_source_hash.sh"
 # shellcheck source=gha_emit.sh
 source "${SCRIPT_DIR}/gha_emit.sh"
 
-UPSTREAM_REPO="https://github.com/MiSTer-devel/Arcade-TimePilot84_MiSTer.git"
+UPSTREAM_REPO="https://github.com/MiSTer-devel/Arcade-TimePilot84_MISTer.git"
 MAIN_BRANCH="main"
 UPSTREAM_BRANCH="main"
 

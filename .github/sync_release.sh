@@ -7,7 +7,7 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 # shellcheck source=retry.sh
 source "${SCRIPT_DIR}/retry.sh"
 
-UPSTREAM_REPO="https://github.com/MiSTer-devel/Arcade-TimePilot84_MiSTer.git"
+UPSTREAM_REPO="https://github.com/MiSTer-devel/Arcade-TimePilot84_MISTer.git"
 CORE_NAME=(Arcade-TimePilot84)
 MAIN_BRANCH="main"
 UPSTREAM_BRANCH="main"
