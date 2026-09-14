@@ -234,7 +234,7 @@ wire  [15:0] db9_remap_din;
 // [MiSTer-DB9 END]
 joydb joydb (
   .clk             ( CLK_JOY         ),
-  .clk_sys         ( clk_sys            ),
+  .clk_sys         ( CLK_49M            ),
   .USER_IN         ( USER_IN         ),
   .OSD_STATUS          ( OSD_STATUS          ),
   .snac_active         ( snac_active         ),
@@ -259,8 +259,8 @@ joydb joydb (
 
 assign USER_OUT = USER_OUT_DRIVE;
 // [MiSTer-DB9 END]
-wire [15:0]   joystick_0 = joydb_1ena ? (OSD_STATUS ? 16'b0 : {joydb_1[9],joydb_1[11],joydb_1[10],joydb_1[5:0]}) : joystick_0_USB;
-wire [15:0]   joystick_1 = joydb_2ena ? (OSD_STATUS ? 16'b0 : {joydb_2[10],joydb_2[11],joydb_2[9],joydb_2[5:0]}) : joydb_1ena ? joystick_0_USB : joystick_1_USB;
+wire [15:0]   joystick_0 = joydb_1ena ? (OSD_STATUS ? 16'b0 : joydb_1_mapped[9:0]) : joystick_0_USB;
+wire [15:0]   joystick_1 = joydb_2ena ? (OSD_STATUS ? 16'b0 : joydb_2_mapped[9:0]) : joydb_1ena ? joystick_0_USB : joystick_1_USB;
 
 ///////// Default values for ports not used in this core /////////
 
